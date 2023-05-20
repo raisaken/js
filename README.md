@@ -1,4 +1,10 @@
+# Prototype and prototypical inheritance
+
+- Prototype inheritance in javascript is the linking of prototypes of a parent object to a child object to share and utilize the properties of a parent class using a child class. Prototypes are hidden objects that are used to share the properties and methods of a parent class to child classes.
+
 # virtual dom
+
+- React creates a virtual DOM. When state changes in a component it firstly runs a "diffing" algorithm, which identifies what has changed in the virtual DOM.
 
 - The virtual DOM (VDOM) is a programming concept where an
 ideal, or “virtual”, representation of a UI is kept in memory
@@ -25,78 +31,64 @@ into a dynamic web page by attaching event handlers to the HTML elements.
 
 - useRef vs useState - If we tried to count how many times our application renders using the useState Hook, we would be caught in an infinite loop since this Hook itself causes a re-render.
 
+# function vs method
+
+- function - set of instruction to perform a specific task
+- method - when function is inside a object its method
+
+# Reusable hooks
+
+# Controlled vs uncontrolled components
+
+# HOC
+
+A higher-order component is a function that takes in a component and returns a new component.
+
+# What is Lifting State Up in ReactJS?
+
+When several components need to share the same changing data then it is recommended to lift the
+shared state up to their closest common ancestor. For example, if two child components share the
+same data from their parent then move the state to the parent instead of maintaining the local state
+in both child components.
+
+# Why we should not update the state directly?
+
+If you try to update state directly then it won’t re-render the component.
+
+# When shall we use useReducer hook in ReactJS?
+
+useReducer is an alternative to useState. useReducer is usually preferable to useState when you have
+complex state logic that involves multiple sub-values or when the next state depends on the
+previous one.
+
+# Redux 
+
+- There is a central store that holds the entire state of the application. Each component can access the stored state without having to send down props from one component to another. 
+
+- There are three core components in Redux — actions, store, and reducers. 
+
+- In Redux, a reducer is a pure function that takes an action and the previous state of the application and returns the new state.
+
+# Middleware
+
+- Middleware allows for side effects to be run without blocking state updates. We can run side effects (like API requests) in response to a specific action, or in response to every action that is dispatched (like logging). 
+
+
+# Pure functions 
+
+- Pure functions return the same output if we use the same input parameters. However, impure functions give different outcomes when we pass the same arguments multiple times
+
 # Optimization
+
+lighthouse
+
+
+
 
 # Testing
 
 
 
+# Why we should not update the state directly?
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The state of a component is managed internally by React. Updating the state of a component directly can have unintended consequences that can be difficult to debug. If the state is updated directly as in the example above, the component will not rerender since the state is compared shallowly.
