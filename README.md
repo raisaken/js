@@ -6,15 +6,20 @@
 
 - React creates a virtual DOM. When state changes in a component it firstly runs a "diffing" algorithm, which identifies what has changed in the virtual DOM.
 
-- The virtual DOM (VDOM) is a programming concept where an
-ideal, or “virtual”, representation of a UI is kept in memory
-and synced with the “real” DOM by a library such as ReactDOM. 
-This process is called reconciliation.
+- The virtual DOM (VDOM) is a programming concept where an ideal, or “virtual”, representation of a UI is kept in memory and synced with the “real” DOM by a library such as ReactDOM. This process is called reconciliation.
 
 
 # Unidirectional data flow or data binding
 
 - Unidirectional data flow describes a one-way data flow where the data can move in only one pathway when being transferred between different parts of the program. React, a Javascript library, uses unidirectional data flow. The data from the parent is known as props.
+
+# Event loop
+
+
+
+# Closure
+
+
 
 # Hydration 
 
