@@ -1,3 +1,28 @@
+# let, var, const
+
+var: 
+	- hoisted (always declared at top of scope, global if none)
+    - function scope
+let:
+    - block scope
+    - not redeclarable
+const: 
+    - block scope
+    - not reassignable
+    - not redeclarable
+
+
+# value and reference type
+
+- value => stack
+
+- reference => heap
+
+
+
+# heap vs stack
+
+- 
 # Prototype and prototypical inheritance
 
 - Prototype inheritance in javascript is the linking of prototypes of a parent object to a child object to share and utilize the properties of a parent class using a child class. Prototypes are hidden objects that are used to share the properties and methods of a parent class to child classes.
